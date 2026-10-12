@@ -46,19 +46,13 @@ It is intended to grow over time as a central place for AI and ML study, experim
 ```text
 AI-ML-Learning-Lab/
 ├── LSTM/
-│   ├── .venv/                     # local environment only; typically ignored
 │   ├── app.py                    # Streamlit app entry point
 │   ├── data_collection_preprocessing.ipynb
-│   ├── hamlet.txt                # Shakespeare text dataset from NLTK Gutenberg
 │   ├── next_word_gru.ipynb       # GRU notebook for future work
 │   ├── next_word_lstm.ipynb      # LSTM training and prediction notebook
-│   ├── next_word_lstm.h5         # saved Keras model artifact
-│   ├── next_word_lstm.keras      # saved Keras model artifact
-│   ├── preprocessed_data.pkl     # generated preprocessing artifact
 │   ├── README.md                 # LSTM project notes
 │   ├── requirements.txt          # Python dependencies
-│   ├── tokenizer.pickle          # tokenizer output generated during preprocessing
-│   └── .gitignore                # local project git exclusions (if present)
+│   └── .venv/                    # local environment only; typically ignored
 ├── assets/
 │   └── ai-lab-banner.svg         # animated repository banner
 ├── .gitignore
@@ -101,9 +95,8 @@ The project uses:
 
 ## Notes on dataset and generated artifacts
 
-- `hamlet.txt` is a downloaded public-domain source dataset used for the learning task and is appropriate to keep in the project if you want a direct local corpus.
-- `tokenizer.pickle` is a generated preprocessing artifact. It is useful when you want to reuse the fitted tokenizer without retraining it, but it is not source code and may be better treated as a local/generated artifact depending on your reproducibility goal.
-- The repository keeps generated model files such as `.h5` and `.keras` out of version control in the root `.gitignore` to avoid large binary churn in the portfolio repository.
+- Local training artifacts such as `.venv`, model files (`.h5`, `.keras`), tokenizer dumps (`.pickle`), and generated data files remain out of Git so the portfolio stays focused on source code, notebooks, and documentation.
+- The LSTM notebooks can regenerate the corpus and preprocessing outputs locally when needed, without storing those generated artifacts in the repository history.
 
 ## Contact and portfolio intent
 

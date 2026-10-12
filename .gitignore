@@ -20,8 +20,13 @@ __pycache__/
 
 # Generated data and model artifacts
 **/preprocessed_data.pkl
+**/tokenizer.pickle
+**/hamlet.txt
 **/*.h5
 **/*.keras
+
+# Local project outputs that should stay out of Git
+**/*.pickle
 
 # Optional local cache files
 .DS_Store
