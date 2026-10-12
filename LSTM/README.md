@@ -213,6 +213,25 @@ The relevant artifacts created in this project are:
 
 These files are useful for local experimentation and model reuse, but they are generated outputs rather than the source code itself.
 
+## Deploy on Streamlit Community Cloud
+
+The app entry point is `LSTM/app.py`, and its dependency file is `LSTM/requirements.txt`. In Streamlit Community Cloud, create an app from the `main` branch of this repository and set the **Main file path** to `LSTM/app.py`. Community Cloud will use the requirements file next to the entry point.
+
+The inference app requires only the trained model and fitted tokenizer. It does not load `preprocessed_data.pkl`, `hamlet.txt`, or the training notebooks. Before deploying, create `LSTM/deployment_artifacts/` and copy these two files into it:
+
+- `next_word_lstm.keras`
+- `tokenizer.pickle`
+
+The app checks `LSTM/deployment_artifacts/` first, then falls back to the existing files directly under `LSTM/` for local use. The deployment directory is narrowly allowlisted in the root `.gitignore`; all other `.keras`, `.pickle`, `.h5`, generated data files, and virtual environments remain ignored. Review the exact files with `git status` and stage only the two named inference artifacts when you are ready to make them available to Community Cloud. The repository is public, so committing these artifacts makes them publicly downloadable. Do not add `preprocessed_data.pkl` or any virtual environment.
+
+From the portfolio root, test the same entry point locally with:
+
+```powershell
+streamlit run LSTM/app.py
+```
+
+The app uses paths relative to its own source file, so running it from the repository root matches Community Cloud's working-directory behavior. Select Python 3.11 in the Cloud app settings to match the verified local environment and the pinned dependencies. After deployment, verify that the app loads both artifacts and generates text.
+
 ## Observed training behavior and overfitting
 
 The notebook output shows the pattern of overfitting clearly:
@@ -244,4 +263,5 @@ Status as confirmed by the current source code:
 - n-gram sequence generation and padding: implemented
 - LSTM training and next-word prediction: implemented
 - validation overfitting observed: confirmed in notebook output
-- full deployment, robust evaluation, and GRU completion: not yet completed in the codebase
+- Streamlit app implementation: present; Community Cloud deployment remains pending artifact provisioning
+- robust evaluation and GRU completion: not yet completed in the codebase

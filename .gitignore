@@ -28,6 +28,11 @@ __pycache__/
 # Local project outputs that should stay out of Git
 **/*.pickle
 
+# Explicitly allow only the inference artifacts used by the Streamlit deployment
+!LSTM/deployment_artifacts/
+!LSTM/deployment_artifacts/next_word_lstm.keras
+!LSTM/deployment_artifacts/tokenizer.pickle
+
 # Optional local cache files
 .DS_Store
 Thumbs.db
