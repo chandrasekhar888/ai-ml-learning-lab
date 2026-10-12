@@ -1,0 +1,28 @@
+# Virtual environments
+.venv/
+venv/
+**/.venv/
+**/venv/
+__pycache__/
+**/__pycache__/
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log
+*.tmp
+
+# Generated data and model artifacts
+**/preprocessed_data.pkl
+**/*.h5
+**/*.keras
+
+# Optional local cache files
+.DS_Store
+Thumbs.db
