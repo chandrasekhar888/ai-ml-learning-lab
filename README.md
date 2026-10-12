@@ -11,93 +11,199 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Apps-FF4B4B?logo=streamlit&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
 
-This repository is a personal AI and machine learning learning lab where I collect current experiments, coursework, and future projects. It serves as a portfolio and a place to document what I build, what I learn, and what I plan to explore next.
+Welcome to my AI & ML Learning Lab — a personal workspace for learning, experimentation, and building practical machine learning and deep learning projects.
 
-## Featured projects
+This repository documents my learning journey through model development, data preprocessing, experimentation, evaluation, and deployment. It will continue to grow as I explore more areas of AI and machine learning.
 
-| Project | Focus | Status | Links |
-| --- | --- | --- | --- |
-| Customer Churn Prediction — ANN | Artificial neural network for churn classification | Deployed project | [Live demo](https://customer-churn-ann-ap.streamlit.app/) • [Repository](https://github.com/chandrasekhar888/Customer_Churn_ANN) |
-| IMDb Sentiment Analysis — RNN | Recurrent neural network for text sentiment | Deployed project | [Live demo](https://imdb-sentiment-rnn-ap.streamlit.app/) • [Repository](https://github.com/chandrasekhar888/Customer_Churn_ANN) |
-| Hamlet Next-Word Prediction — LSTM | LSTM-based next-word prediction using Shakespeare's Hamlet | Local learning project in progress | [LSTM folder](LSTM/) • dataset from NLTK Gutenberg |
+## Featured Projects
 
-## Why this repository exists
+| Project | Description | Status | Links |
+|---|---|---|---|
+| Customer Churn Prediction — ANN | Artificial neural network for customer churn classification | Deployed | [Live Demo](https://customer-churn-ann-ap.streamlit.app/) · [GitHub Repository](https://github.com/chandrasekhar888/Customer_Churn_ANN) |
+| IMDb Sentiment Analysis — RNN | Recurrent neural network for sentiment classification of movie reviews | Deployed | [Live Demo](https://imdb-sentiment-rnn-ap.streamlit.app/) · [GitHub Repository](https://github.com/chandrasekhar888/Customer_Churn_ANN) |
+| Hamlet Next-Word Prediction — LSTM | Predicts subsequent words using an LSTM trained on Shakespeare's *Hamlet* | Deployed | [Live Demo](https://ai-ml-learning-lab-dtrdnbqkrupw2cdps9tjjo.streamlit.app/) · [Source Code](LSTM/) |
 
-This lab brings together:
+## Project Details
 
-- model experiments and notebooks
-- data preprocessing workflows
-- deployment-ready portfolio apps
-- reusable learning notes and project documentation
-- future work across NLP, deep learning, classical ML, and MLOps
+### 1. Customer Churn Prediction — ANN
 
-It is intended to grow over time as a central place for AI and ML study, experimentation, and portfolio-building.
+A deep learning project that uses an artificial neural network to predict customer churn.
 
-## Future learning roadmap
+- **Technology:** Python, TensorFlow/Keras, Streamlit
+- **Objective:** Predict whether a customer is likely to leave a service.
+- **Deployment:** Streamlit Community Cloud
 
-1. Strengthen foundational ML and deep learning theory.
-2. Expand NLP projects with transformers and attention-based models.
-3. Add model evaluation, explainability, and deployment workflows.
-4. Build end-to-end ML projects with reproducible pipelines and documentation.
-5. Continue exploring production-ready AI applications with Streamlit, APIs, and cloud deployment.
+[Open Live Demo](https://customer-churn-ann-ap.streamlit.app/) · [View Repository](https://github.com/chandrasekhar888/Customer_Churn_ANN)
 
-## Repository structure
+### 2. IMDb Sentiment Analysis — RNN
+
+A natural language processing project that uses a recurrent neural network to classify movie-review sentiment.
+
+- **Technology:** Python, TensorFlow/Keras, NLP, Streamlit
+- **Objective:** Predict sentiment from review text.
+- **Deployment:** Streamlit Community Cloud
+
+[Open Live Demo](https://imdb-sentiment-rnn-ap.streamlit.app/)
+
+The sentiment-analysis project is currently linked to the existing `Customer_Churn_ANN` repository. If its source code is maintained in a separate repository, update that link to the correct repository.
+
+### 3. Hamlet Next-Word Prediction — LSTM
+
+A language-modeling project that predicts the next word in a sequence using an LSTM trained on Shakespeare's *Hamlet*, obtained through the NLTK Gutenberg corpus.
+
+- **Technology:** Python, TensorFlow/Keras, NLTK, NumPy, Streamlit
+- **Data preprocessing:** Tokenization, progressive n-gram sequence generation, and pre-padding.
+- **Model:** Embedding layer followed by LSTM layers and a softmax output layer.
+- **Prediction:** Generates subsequent words from user-provided text.
+- **Interface:** Streamlit application.
+- **Deployment:** Streamlit Community Cloud.
+
+**Try the application:** [Hamlet Next-Word Prediction — Live Demo](https://ai-ml-learning-lab-dtrdnbqkrupw2cdps9tjjo.streamlit.app/)
+
+The current model demonstrates the complete next-word prediction workflow. Training showed overfitting and low validation accuracy, so improving prediction quality remains a future task.
+
+The repository also contains a GRU notebook for future experimentation and comparison with the LSTM approach.
+
+## Why This Repository Exists
+
+This repository brings together:
+
+- Deep learning and machine learning experiments.
+- Data preprocessing and model-training notebooks.
+- Natural language processing projects.
+- Deployed applications and interactive demos.
+- Reusable learning notes and project documentation.
+- Future work involving transformers, generative AI, and MLOps.
+
+The goal is to maintain a clear, reproducible, and continuously improving AI/ML portfolio.
+
+## Technology Stack
+
+| Area | Technologies |
+|---|---|
+| Programming | Python |
+| Deep Learning | TensorFlow, Keras |
+| Machine Learning | scikit-learn |
+| Natural Language Processing | NLTK |
+| Data Processing | NumPy |
+| Development | Jupyter Notebook, VS Code |
+| Applications | Streamlit |
+| Version Control | Git, GitHub |
+
+## Repository Structure
 
 ```text
-AI-ML-Learning-Lab/
+AI_Projects_Practice/
 ├── LSTM/
-│   ├── app.py                    # Streamlit app entry point
+│   ├── app.py
 │   ├── data_collection_preprocessing.ipynb
-│   ├── next_word_gru.ipynb       # GRU notebook for future work
-│   ├── next_word_lstm.ipynb      # LSTM training and prediction notebook
-│   ├── README.md                 # LSTM project notes
-│   ├── requirements.txt          # Python dependencies
-│   └── .venv/                    # local environment only; typically ignored
+│   ├── next_word_gru.ipynb
+│   ├── next_word_lstm.ipynb
+│   ├── README.md
+│   └── requirements.txt
 ├── assets/
-│   └── ai-lab-banner.svg         # animated repository banner
+│   └── ai-lab-banner.svg
 ├── .gitignore
-├── README.md
-└── LICENSE (if added later)
+└── README.md
 ```
 
-## Installation and reproducibility notes
+The root README documents the overall portfolio. Each project can maintain its own README with project-specific details, setup instructions, and implementation notes.
 
-For the local LSTM project:
+## Running the LSTM Project Locally
+
+### Prerequisites
+
+- Python 3.11
+- Git
+- A virtual environment
+- The trained LSTM model and tokenizer files required for inference
+
+### 1. Clone the repository
 
 ```bash
-cd D:\AI_Projects_Practice
-python -m venv .venv
-# Windows PowerShell
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r LSTM\requirements.txt
+git clone https://github.com/chandrasekhar888/ai-ml-learning-lab.git
+cd ai-ml-learning-lab
 ```
 
-Then run the notebook workflow in the `LSTM` folder:
+### 2. Create and activate a virtual environment
+
+From the repository root, using Windows PowerShell:
+
+```powershell
+python -m venv LSTM/.venv
+.\LSTM\.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
+
+```powershell
+python -m pip install -r LSTM/requirements.txt
+```
+
+### 4. Run the Streamlit application
+
+```powershell
+cd LSTM
+streamlit run app.py
+```
+
+**Note:** The trained model (`next_word_lstm.keras`) and tokenizer (`tokenizer.pickle`) are excluded from Git by the repository's ignore rules. They must be supplied separately for local inference unless you regenerate them by running the training workflow. The generated preprocessing file `preprocessed_data.pkl` is not required to run predictions with an already trained model and tokenizer.
+
+## Reproducing the LSTM Workflow
+
+The notebooks document the model development process:
+
+1. Collect the Shakespeare text using the NLTK Gutenberg corpus.
+2. Preprocess the text and tokenize words.
+3. Generate progressive n-gram sequences.
+4. Pad sequences to a consistent length.
+5. Train the LSTM model to predict the next word.
+6. Evaluate model performance.
+7. Save the trained model and tokenizer.
+8. Run predictions through the Streamlit interface.
+
+For corpus preparation, the NLTK Gutenberg corpus may need to be downloaded:
 
 ```python
 import nltk
-nltk.download('gutenberg')
+
+nltk.download("gutenberg")
 ```
 
-The project uses:
+Training and preprocessing outputs are generated locally rather than committed to the repository.
 
-- NLTK Gutenberg for the Shakespeare corpus
-- TensorFlow / Keras for the LSTM model
-- NumPy and scikit-learn for preprocessing and data splitting
-- Jupyter notebooks for data preparation and training
+## Current Project Status
 
-## Current project status
+- **Customer Churn Prediction — ANN:** Deployed and available through its Streamlit demo.
+- **IMDb Sentiment Analysis — RNN:** Deployed and available through its Streamlit demo.
+- **Hamlet Next-Word Prediction — LSTM:** Model training and prediction logic implemented; Streamlit app deployed and working.
+- **GRU:** Follow-up experiment planned for comparison with the LSTM model.
+- **Model improvement:** Further evaluation and reduction of overfitting remain future goals.
 
-- Customer Churn Prediction — ANN: linked externally and available through the deployed Streamlit app.
-- IMDb Sentiment Analysis — RNN: linked externally and available through the deployed Streamlit app.
-- Hamlet Next-Word Prediction — LSTM: preprocessing, sequence generation, padding, model training, prediction logic, and artifact saving are implemented in the notebooks and files in the `LSTM` folder. The code shows overfitting during training, and further evaluation and deployment work may remain.
-- GRU notebook: present as a planned follow-up, not a completed implementation in the current code.
+## Future Learning Roadmap
 
-## Notes on dataset and generated artifacts
+1. Strengthen machine learning and deep learning fundamentals.
+2. Explore attention mechanisms and transformer architectures.
+3. Build more NLP projects, including text classification and language modeling.
+4. Improve model evaluation, generalization, and explainability.
+5. Develop reproducible training and deployment pipelines.
+6. Explore generative AI, large language models, retrieval-augmented generation (RAG), and AI agents.
+7. Expand deployment experience with Streamlit, APIs, containers, and cloud platforms.
 
-- Local training artifacts such as `.venv`, model files (`.h5`, `.keras`), tokenizer dumps (`.pickle`), and generated data files remain out of Git so the portfolio stays focused on source code, notebooks, and documentation.
-- The LSTM notebooks can regenerate the corpus and preprocessing outputs locally when needed, without storing those generated artifacts in the repository history.
+## Dataset and Generated Artifacts
 
-## Contact and portfolio intent
+To keep the repository focused on source code and documentation, the following local files are excluded from Git:
 
-This repository is designed as a portfolio and learning archive for applied AI and ML work. It is intentionally structured so that new projects can be added over time without disrupting the existing learning materials.
+- Python virtual environments and cache files.
+- Trained model files such as `.h5` and `.keras`.
+- Serialized tokenizer files such as `.pickle`.
+- Generated preprocessing data such as `preprocessed_data.pkl`.
+- The locally generated `hamlet.txt` corpus file.
+
+The notebooks and documentation describe how to reproduce the preprocessing and training workflow. A deployed application must still have access to the specific model and tokenizer it needs for inference.
+
+## Contact and Portfolio
+
+This repository is my evolving portfolio for applied AI and machine learning. It is organized to make existing projects easy to explore while leaving room for future experiments and applications.
+
+Thank you for visiting my AI & ML Learning Lab!
